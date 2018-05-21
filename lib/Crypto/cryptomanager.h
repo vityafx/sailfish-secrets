@@ -332,6 +332,9 @@ public:
 
     bool isInitialized() const;
 
+protected:
+    CryptoManagerPrivate *pimpl() const; // for unit tests
+
 private:
     QScopedPointer<CryptoManagerPrivate> const d_ptr;
     Q_DECLARE_PRIVATE(CryptoManager)
